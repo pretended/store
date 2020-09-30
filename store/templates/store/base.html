@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    {% block title %}<title>BioYecla | Tienda Online</title>{% endblock %}
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS here -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "store/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "store/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "store/css/slicknav.css"%}">
+    <link rel="stylesheet" href="{% static "store/css/flaticon.css"%}">
+    <link rel="stylesheet" href="{% static "store/css/progressbar_barfiller.css"%}">
+    <link rel="stylesheet" href="{% static "store/css/gijgo.css"%}">
+    <link rel="stylesheet" href="{% static "store/css/animate.min.css"%}">
+    <link rel="stylesheet" href="{% static "store/css/animated-headline.css"%}">
+    <link rel="stylesheet" href="{% static "store/css/magnific-popup.css"%}">
+    <link rel="stylesheet" href="{% static "store/css/fontawesome-all.min.css"%}">
+    <link rel="stylesheet" href="{% static "store/css/themify-icons.css"%}">
+    <link rel="stylesheet" href="{% static "store/css/slick.css"%}">
+    <link rel="stylesheet" href="{% static "store/css/nice-select.css"%}">
+    {% block cssDePagina %}{% endblock %}
+    <link rel="stylesheet" href="{% static "store/css/style.css" %}">
+
+</head>
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static "store/img/logo.png" %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="base.html"><img src="{% static "store/img/logo.png" %}" style="width: 70px" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a href="/store/home">Home</a></li>
+                                                <li><a href="/store/productos">Productos</a></li>
+                                                <li><a href="/store/quienessomos">Quienes Somos</a></li>
+                                                <li><a href="/store/micuenta">Mi Cuenta</a></li>
+                                                <li><a href="/store/cart"><i class="ri-shopping-cart-line ri-1x"></i>{% block itemsInCart %}{% endblock %}</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+{% block content %}
+
+{% endblock %}
+<footer>
+ <div class="footer-wrappper">
+    <!-- Footer Start-->
+    <div class="footer-area footer-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-6 col-sm-8">
+                    <div class="single-footer-caption mb-50">
+                        <div class="single-footer-caption mb-30">
+                            <!-- logo -->
+                            <div class="footer-logo mb-25">
+                                <a href="base.html"><img src="{% static 'store/img/logo.png' %}" alt=""></a>
+                            </div>
+                            <div class="footer-tittle">
+                                <div class="footer-pera">
+                                    <p>Parte rural de Yecla, Murcia (España).</p>
+                                </div>
+                            </div>
+                            <!-- social -->
+                            <div class="footer-social">
+                                <a href="#"><i class="ri-twitter-fill"></i></a>
+                                <a href="#"><i class="ri-facebook-fill"></i></a>
+                                <a href="#"><i class="ri-instagram-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Links</h4>
+                            <ul>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Envíos</a></li>
+                                <li><a href="#">Devoluciones</a></li>
+                                <li><a href="#">Términos de uso</a></li>
+                                <li><a href="#">Aviso Legal</a></li>
+                                <li><a href="#">Política de Privacidad</a></li>
+                                <li><a href="#">Política de Cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Sobre Nosotros</h4>
+                            <ul>
+                                <li><a href="#">Quienes Somos</a></li>
+                                <li><a href="#">Productos</a></li>
+                                <li><a href="#">Nuestro compromiso</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer-bottom area -->
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="footer-border">
+                <div class="row d-flex align-items-center">
+                    <div class="col-xl-12 ">
+                        <div class="footer-copy-right text-center">
+                            <p>
+                              Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script> Todos los derechos reservados. <img src="{% static 'store/img/logo.png' %}" width="6%" alt="logo">
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Footer End-->
+  </div>
+</footer>
+
+<!-- Scroll Up -->
+<div id="back-top" >
+    <a title="Go to Top" href="#"><i class="ri-arrow-up-line"></i></a>
+</div>
+
+<!-- JS here -->
+<script src="{% static "store/js/vendor/modernizr-3.5.0.min.js" %}"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="{% static "store/js/vendor/jquery-1.12.4.min.js" %}"></script>
+<script src="{% static "store/js/popper.min.js" %}"></script>
+<script src="{% static "store/js/bootstrap.min.js" %}"></script>
+<!-- Jquery Mobile Menu -->
+<script src="{% static "store/js/jquery.slicknav.min.js" %}"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="{% static "store/js/owl.carousel.min.js" %}"></script>
+<script src="{% static "store/js/slick.min.js" %}"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="{% static "store/js/wow.min.js" %}"></script>
+<script src="{% static "store/js/animated.headline.js" %}"></script>
+<script src="{% static "store/js/jquery.magnific-popup.js" %}"></script>
+
+<!-- Date Picker -->
+<script src="{% static "store/js/gijgo.min.js" %}"></script>
+<!-- Nice-select, sticky -->
+<script src="{% static "store/js/jquery.nice-select.min.js" %}"></script>
+<script src="{% static "store/js/jquery.sticky.js" %}"></script>
+<!-- Progress -->
+<script src="{% static "store/js/jquery.barfiller.js" %}"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="{% static "store/js/jquery.counterup.min.js" %}"></script>
+<script src="{% static "store/js/waypoints.min.js" %}"></script>
+<script src="{% static "store/js/jquery.countdown.min.js" %}"></script>
+<script src="{% static "store/js/hover-direction-snake.min.js" %}"></script>
+
+<!-- contact js -->
+<script src="{% static "store/js/contact.js" %}"></script>
+<script src="{% static "stores/js/jquery.form.js" %}"></script>
+<script src="{% static "store/js/jquery.validate.min.js" %}"></script>
+<script src="{% static "store/js/mail-script.js" %}"></script>
+<script src="{% static "store/js/jquery.ajaxchimp.min.js" %}"></script>
+
+<!-- Jquery Plugins, main Jquery -->
+<script src="{% static "store/js/plugins.js" %}"></script>
+<script src="{% static "store/js/main.js" %}"></script>
+
+</body>
+</html>

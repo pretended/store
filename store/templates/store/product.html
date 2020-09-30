@@ -1,0 +1,21 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block cssDePagina %} <link rel="stylesheet" href="{% static "store/css/product.css" %}">{% endblock %}
+    {% block title %}<title>{{ items.0.title }} | BioYecla Tienda Online</title>{% endblock %}
+{% block content %}
+    {% for item in items %}
+        <div class="productContainer">
+            <div class="productCard">
+                <div class="productImage">
+                    <img src="{% static '/store/img/' %}{{ image }}" alt="">
+                </div>
+                <div class="productDescription">
+                    <h2>{{ item.title }}</h2>
+                    <h1>{{ item.cost }}€</h1>
+                    <p>{{ item.description }}</p>
+                    <button>Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
